@@ -1,0 +1,78 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Q1 & Q2: Grid Container Setup */
+.gallery-container {
+    display: grid;
+    /* Sets up a 3-column grid layout with equal fractions */
+    grid-template-columns: repeat(3, 1fr);
+    /* Sets the gap/spacing between grid items */
+    grid-gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Card Styling */
+.card {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.card-content h3 {
+    margin: 0 0 10px 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.card-content p {
+    margin: 0 0 15px 0;
+    font-size: 13px;
+    color: #666;
+    line-height: 1.4;
+}
+
+.card-content button {
+    margin-top: auto;
+    background: #777;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 12px;
+}
+
+.card-content button:hover {
+    background: #555;
+}
+
+/* Q2 with SPAN: Making the first card span across 2 columns */
+.card-large {
+    grid-column: span 2;
+}
+
+.card-large img {
+    height: 220px;
+}
